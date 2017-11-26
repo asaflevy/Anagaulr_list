@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-lg-6 search-item">
+        <div class="input-group">
+            <input  type="text" class="form-control" ng-model="$pr.inputFilter$" placeholder="Search for products..." aria-label="Search for...">
+            <span class="input-group-btn">
+        <button ng-click="$pr.applyFilter$()" class="btn btn-secondary" type="button">Search</button>
+      </span>
+        </div>
+    </div>
+</div>
+<div class="product-list">
+    <div ng-repeat="product in $pr.productsIn$ | filter: $pr.filterBy$| limitTo: 200 track by $index">
+        <product-box product="product"></product-box>
+    </div>
+</div>

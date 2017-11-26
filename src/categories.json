@@ -1,0 +1,18 @@
+{
+  "Categories":
+    [
+      {
+        "Id": 10,
+        "Name":"Enduro"
+      },
+      {
+        "Id": 20,
+        "Name":"Trail"
+      },
+      {
+        "Id": 30,
+        "Name":"Sport"
+      }
+    ]
+
+}

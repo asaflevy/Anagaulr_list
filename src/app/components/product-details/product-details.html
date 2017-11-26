@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <legend>Edit: {{$pr.product$.Name}}</legend>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-body form-horizontal payment-form">
+                    <div class="form-group">
+                        <label for="pr_name" class="col-sm-3 control-label">Name: </label>
+                        <div class="col-sm-9">
+                            <input type="text" ng-model="$pr.product$.Name" class="form-control" id="pr_name" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="pr_Category" class="col-sm-3 control-label">Category: </label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="pr_Category"  name="category" class="form-control"
+                                        ng-options="item.Id as item.Name for item in $pr.categories$" ng-model="$pr.product$.CategoryId">
+                                </select>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pr_price" class="col-sm-3 control-label">Price: </label>
+                        <div class="col-sm-9">
+                            <div class="col-sm-5">
+                                <div class="input-group">
+                                <input type="number" ng-model="$pr.product$.Price" class="form-control" id="pr_price" name="price">
+                                    <div class="input-group-addon">$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 buttons-groups">
+                            <div class="col-sm-7">
+                                <button ng-click="$pr.removeItem$($pr.product$)" type="button" class="btn btn-danger product-update-button">
+                                    <span class="glyphicon glyphicon-remove"></span> Delete
+                                </button>
+                            </div>
+
+                            <button ng-click="$pr.cancel$()" type="button" class="btn btn-primary product-update-button">
+                                <span class="glyphicon glyphicon-remove"></span> cancel
+                            </button>
+                            <button ng-click="$pr.updateItem$($pr.product$)" type="button" class="btn btn-primary product-update-button">
+                                <span class="glyphicon glyphicon-ok"></span> Update
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

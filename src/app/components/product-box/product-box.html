@@ -1,0 +1,14 @@
+<div class="card card-inverse card-info">
+    <div class="card-block">
+        <figure class="">
+            <img class="card-image" data-ng-src="{{$pr.productItem$.Image}}" width="250" height="250">
+        </figure>
+        <h4 class="card-title">{{$pr.productItem$.Name | limitTo:99}}</h4>
+        <h4 class="card-price">{{$pr.productItem$.Price | currency:"$ ":0}}</h4>
+
+    </div>
+    <div class="card-footer">
+        <span class="label label-default category">{{$pr.productItem$.Category.Name}}</span>
+        <button class="btn btn-primary float-right btn-sm"><a ui-sref="editProduct({productId: {{$pr.productItem$.Id}}})">Edit </a></button>
+    </div>
+</div>
